@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'BlackChancery';
+    src: url('../assets/Blackchancery.TTF');
+    format: 'truetype';
+}
+
+.about-background, .about-background-loaded{
+    width: 100vw;
+    height: 90vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    background-size: cover;
+  }
+
+  .about-background{
+    filter: blur(3px);
+    transition: filter 0.5s ease-in;
+  }
+
+  .about-background-loaded{
+    filter: blur(0px);
+}
+  
+.about-background h1, .about-background-loaded h1{
+    font-family: 'BlackChancery';
+    font-size: 6em;
+    font-weight: 500;
+  
+    transform: translate(0, -1em);
+  
+    color: white;
+  }
+
+
+.about-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 2em 0;
+}
+
+.about{
+    width: 60vw;
+    padding: 2em;
+
+    background-color: white;
+    border-radius: 2em;
+    box-shadow: 0 0 1em rgb(218, 218, 218);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about p{
+    padding-bottom: 2em;
+    line-height: 1.5em;
+}
+
+
+  @media (max-width: 640px) {
+    .about-background h1{
+      font-size: 4em;
+    }
+  
+    .about-background{
+      height: 70vh;
+    }
+
+    .about{
+        width: 90vw !important;
+        padding: 2em !important;
+    }
+}

@@ -1,19 +1,83 @@
+import { useState } from 'react';
 import { NavLink } from "react-router";
+import { ReactSVG } from 'react-svg';
+
+import logo from "../assets/logo.svg";
+
+import './Navbar.css';
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const displayMenu = () => {
+    if(isMenuOpen){
+      return(
+        <>
+          x
+        </>
+      )
+    }else{
+      return(
+        <>
+          ☰
+        </>
+      )
+    }
+  }
+
   return (
-    <>
-      <h1>Navbar</h1>
-      <nav>
+    <div className={`navbar-container`}>
+
+      <div className="logo-burger-container">
+        <ReactSVG
+          beforeInjection={(svg) => {
+            svg.setAttribute('style', 'filter: blur(10px)');
+          }}
+          afterInjection={(svg) => {
+            svg.setAttribute('style', 'filter: blur(0px)');
+          }}
+          className="svg-logo"
+          onClick={() => {
+            console.log('wrapper onClick');
+          }}
+          src={logo}
+          title="Logo Tersicore"
+        />
+
+        <div className="burger-menu" onClick={toggleMenu}>
+          {displayMenu()}
+        </div>
+
+      </div>
+
+
+      <nav className={`nav-links${isMenuOpen ? '-open' : ''}`}>
         <NavLink to="/" end>
             Home
         </NavLink>
-        <NavLink to="/about">
-            About
+        <NavLink to="/chi-siamo">
+            Chi siamo
+        </NavLink>
+        <NavLink to="/direttore">
+            Direttore
+        </NavLink>
+        <NavLink to="/calendario">
+            Calendario
+        </NavLink>
+        <NavLink to="/repertorio">
+            Repertorio
+        </NavLink>        
+        <NavLink to="/galleria">
+            Galleria
         </NavLink>
       </nav>
-    </>
-  )
+
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;
