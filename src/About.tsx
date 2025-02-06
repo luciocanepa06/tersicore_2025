@@ -1,35 +1,26 @@
-import { useState, useEffect } from 'react';
+import SideImage from './utils/SideImage.tsx'
 
 import Navbar from './utils/Navbar.tsx'
 import Footer from './utils/Footer.tsx'
+import { ImagePropsType } from './utils/BackgroundImage.tsx';
+
 import './utils/About.css'
 
 function About() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const imageUrl = "https://imgix.cosmicjs.com/77401b00-e548-11ee-a01e-c56f185aea7b-bg-chi-siamo.jpg"
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = imageUrl;
-    img.onload = () => {
-      setIsLoaded(true);
-    };
-  }, [imageUrl]);
-
+  const ImageProps: ImagePropsType = {
+    alt: "about page side image",
+    src: "https://imgix.cosmicjs.com/ad71b150-e4a9-11ef-8a63-eb57d6c77a36-Coro-Tersicore-1.JPG",
+    lowres: "https://imgix.cosmicjs.com/8cf247b0-e4d5-11ef-8a63-eb57d6c77a36-ad71b150-e4a9-11ef-8a63-eb57d6c77a36-Coro-Tersicore-1.jpg"
+  }
 
   return (
     <>
         <Navbar />
-
-        <div 
-          className={`about-background${isLoaded ? '-loaded' : ''}`}
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        >
-          <h1 className="title">Chi siamo</h1>
-        </div>
-
         <div className='about-container'>
-          <div className='about'>
+          <SideImage props={ImageProps} />
+        <div className='about'>
+          <h1>Chi siamo</h1>
+          <div className='about-text'>
             <p>
               L'Associazione Coro Tersicore nasce a Lugano nel mese di novembre del 2002 per volontà di un gruppo di giovani (di età compresa fra i 20 e i 30 anni) accomunati dalla passione per la musica.
               Gli attuali membri, che vantano un'esperienza pluriennale in ambito corale, si ritrovano settimanalmente per provare insieme. I coristi curano la propria preparazione sia attraverso gli incontri settimanali che attraverso uno studio personale.
@@ -47,7 +38,7 @@ function About() {
             </p>
           </div>
         </div>
-
+        </div>
         <Footer />
     </>
   )

@@ -1,0 +1,106 @@
+.gallery-controls{
+    width: 70vw;
+    height: 12vh;
+    margin: 2em auto 1em auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.gallery-dropdown-container{
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.gallery-controls h1{
+    width: 70vw;
+}
+
+.gallery-dropdown-container label{
+    padding-right: 2em;
+}
+
+#gallery-dropdown{
+    width: 30vw;
+    background-color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgb(215, 215, 215);
+}
+
+.image-gallery{
+    min-width: 70vw;
+    max-width: 70vw;
+    min-height: calc(100vh - 10vh - 12vh - 3em);
+    max-height: calc(100vh - 10vh - 12vh - 3em);
+    margin: 0 auto 4em auto;
+}
+.image-gallery-content img, .image-gallery-slide img, .image-gallery-image img{
+    min-width: 70vw;
+    max-width: 70vw;
+    min-height: calc(100vh - 10vh - 12vh - 3em);
+    max-height: calc(100vh - 10vh - 12vh - 3em);
+    object-fit: cover;
+}
+
+.fullscreen img {
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+    object-fit: contain;
+}
+  
+.image-gallery-left-nav, .image-gallery-right-nav, .image-gallery-fullscreen-button, .image-gallery-play-button {
+    box-shadow: none;
+}
+
+.image-gallery-left-nav:hover, .image-gallery-right-nav:hover, .image-gallery-fullscreen-button:hover, .image-gallery-play-button:hover {
+    color: #911100;
+    box-shadow: none;
+}
+
+.image-gallery-bullets .image-gallery-bullet:hover, .image-gallery-bullet.active:hover{
+    background: #911100 !important;
+    border: 1px solid #911100 !important;
+}
+
+@media (max-width: 640px) {
+    .gallery-controls{
+        width: 90vw;
+        margin: 6em auto 1em auto;
+    }
+    .gallery-dropdown-container{
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .gallery-dropdown-container label{
+        display: none;
+    }
+    #gallery-dropdown{
+        width: 80vw;
+        margin: 0 auto;
+    }
+    .gallery-controls h1{
+        width: 80vw;
+        margin: 0 auto;
+    }
+    .image-gallery{
+        min-width: 100vw !important;
+        max-width: 100vw !important;
+        min-height: calc(100vh - 10vh - 12vh - 9em) !important;
+        max-height: calc(100vh - 10vh - 12vh - 9em) !important;
+        margin: 0 auto 4em auto !important;
+    }
+    .image-gallery-content img, .image-gallery-slide img, .image-gallery-image img{
+        min-width: 100vw !important;
+        max-width: 100vw !important;
+        min-height: calc(100vh - 10vh - 12vh - 9em) !important;
+        max-height: calc(100vh - 10vh - 12vh - 9em) !important;
+        object-fit: cover !important;
+    }
+}

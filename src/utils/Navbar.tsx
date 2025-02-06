@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { NavLink } from "react-router";
+import { NavLink} from "react-router";
+import { useNavigate } from "react-router-dom";
 import { ReactSVG } from 'react-svg';
 
 import logo from "../assets/logo.svg";
@@ -8,6 +9,8 @@ import './Navbar.css';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -42,7 +45,7 @@ function Navbar() {
           }}
           className="svg-logo"
           onClick={() => {
-            console.log('wrapper onClick');
+            navigate("/");
           }}
           src={logo}
           title="Logo Tersicore"

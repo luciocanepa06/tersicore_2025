@@ -117,22 +117,9 @@ main{
   margin-bottom: 1.5em;
 }
 
-.next-event-card a{
-  transform: translate(0, 1em);
-  text-align: center;
-  text-decoration: none;
-
-  padding-top: 1em;
-  border-top: 1px solid rgb(215, 215, 215);
-
+#discover {
   color:#333;
-  font-weight: 700;
-}
-
-.next-event-card a:hover{
-    cursor: pointer;
-    color: #911100;
-    text-decoration: underline;
+  font-weight: 500;
 }
 
 .cd-container{

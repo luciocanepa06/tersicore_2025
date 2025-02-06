@@ -1,35 +1,26 @@
-import { useState, useEffect } from 'react';
-
 import Navbar from './utils/Navbar.tsx'
 import Footer from './utils/Footer.tsx'
-import './utils/Director.css'
+
+import SideImage from './utils/SideImage.tsx';
+import { ImagePropsType } from './utils/BackgroundImage.tsx';
+
+import './utils/About.css'
 
 function Director() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const imageUrl = "https://imgix.cosmicjs.com/3c4b74b0-e54b-11ee-a01e-c56f185aea7b-bg-direttore.jpg"
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = imageUrl;
-    img.onload = () => {
-      setIsLoaded(true);
-    };
-  }, [imageUrl]);
-
-
+  const ImageProps: ImagePropsType = {
+    alt: "director page side image",
+    src: "https://imgix.cosmicjs.com/a9e5b680-e4cc-11ef-8a63-eb57d6c77a36-CleanShot-2025-02-06-at-21-55-00.png",
+    lowres: "https://imgix.cosmicjs.com/8c9a1590-e4d5-11ef-8a63-eb57d6c77a36-a9e5b680-e4cc-11ef-8a63-eb57d6c77a36-CleanShot-2025-02-06-at-21-55-00.jpg"
+  }
   return (
     <>
         <Navbar />
 
-        <div 
-          className={`director-background${isLoaded ? '-loaded' : ''}`}
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        >
-          <h1 className="title">Direttore</h1>
-        </div>
-
         <div className='about-container'>
+          <SideImage props={ImageProps}/>
           <div className='about'>
+          <h1 className="title">Direttore</h1>
+          <div className='about-text'>
             <p>
             Guido Riccardo Mollica nato nel 1965 ha iniziato gli studi musicali sette anni
             dopo sotto la guida del M° W. Zaramella, con il quale si è diplomato in organo e
@@ -47,6 +38,7 @@ function Director() {
             computazionale.
             </p>
           </div>
+        </div>
         </div>
 
         <Footer />

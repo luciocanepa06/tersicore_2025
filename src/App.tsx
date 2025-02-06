@@ -5,10 +5,10 @@ import './App.css';
 
 import Navbar from './utils/Navbar.tsx';
 import Footer from './utils/Footer.tsx';
-import BackgroundImage from './utils/BackgroundImage.tsx';
 
-import { getNextEvents, formatDate } from './utils/tooling.tsx'
 import { ImagePropsType } from './utils/BackgroundImage.tsx';
+import BackgroundImage from './utils/BackgroundImage.tsx';
+import { getNextEvents, formatDate } from './utils/tooling.tsx'
 
 type Event = {
   titolo: String,
@@ -67,7 +67,7 @@ function App() {
             <div>
               <h1>Dieci</h1>
               <p>Il nostro CD di musica</p>
-              <a>Scopri di più</a>
+              <p id="discover">Potete trovare il CD ai nostri concerti</p>
             </div>
       </div>
 

@@ -30,6 +30,10 @@
     transform: translate(1em, 2em);
 }
 
+.svg-logo:hover{
+    cursor: pointer;
+}
+
 .nav-links{
     width: 70vw;
     height: 10vh;
