@@ -15,7 +15,7 @@
 
 .about-container img{
   width: 30vw;
-  height: 90vh;
+  height: 90dvh;
   object-fit: cover;
   border-radius: 0 4em 4em 0;
 }
@@ -54,7 +54,7 @@
   }
   .about-container img{
     width: 100vw;
-    height: 40vh;
+    height: 40dvh;
     border-radius: 0 0 4em 4em;
   }
   .about{

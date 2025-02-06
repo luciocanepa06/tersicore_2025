@@ -31,7 +31,7 @@ main{
 
 .home-background, .home-background-lowres, .home-background-loaded{
   width: 100vw;
-  height: 90vh;
+  height: 90dvh;
 
   display: flex;
   align-items: center;
@@ -192,7 +192,7 @@ main{
   }
 
   .home-background, .home-background-lowres, .home-background-loaded{
-    height: 70vh;
+    height: 70dvh;
   }
 
   .next-event-card{
