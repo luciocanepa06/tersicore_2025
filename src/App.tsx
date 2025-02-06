@@ -49,7 +49,6 @@ function App() {
         {event.titolo != '' &&
         <>
           <h1>{event.titolo}</h1>
-          {/* TODO: update date format: 13 aprile 2025 */}
           <p>{formatDate(event.data)} - {event.ora}</p>
           <p>{event.luogo}</p>
         </>

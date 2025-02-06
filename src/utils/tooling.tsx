@@ -100,7 +100,7 @@ export async function getNextEvents(year: string, next: boolean){
         return events
   }
 
-export function formatDate(date: string){
+export function formatDate(date: String){
     const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"]
 
     const [year, month, day] = date.split('-')

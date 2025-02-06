@@ -1,5 +1,5 @@
 import Navbar from "./utils/Navbar.tsx"
-import Footer from "./utils/Footer.tsx"
+// import Footer from "./utils/Footer.tsx"
 
 import { getImages } from "./utils/tooling.tsx"
 
