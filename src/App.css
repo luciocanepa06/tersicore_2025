@@ -29,7 +29,7 @@ main{
 }
 
 
-.home-background, .home-background-loaded{
+.home-background, .home-background-lowres, .home-background-loaded{
   width: 100vw;
   height: 90vh;
 
@@ -43,23 +43,31 @@ main{
   background-size: cover;
 }
 
-.home-background{
-  filter: blur(3px);
-  transition: filter 0.5s ease-in;
-}
+.home-background h1{
+  display: none;
+  transform: translate(0, -2em);
+  filter: blur(5px);
+  transition: transform 0.5s ease-in, filter 0.5s ease-in;
 
-.home-background-loaded{
-  filter: blur(0px);
-}
-
-  .home-background h1, .home-background-loaded h1{
   font-family: 'BlackChancery';
   font-size: 6em;
   font-weight: 500;
 
-  transform: translate(0, -1em);
 
   color: white;
+}
+
+.home-background-lowres h1{
+  display: none;
+  transform: translate(0, -2em);
+  filter: blur(5px);
+  transition: transform 0.5s ease-in, filter 0.5s ease-in;
+}
+
+.home-background-loaded h1{
+  display: block;
+  transform: translate(0, -1em);
+  filter: blur(0px);
 }
 
 .next-event-container{
@@ -179,7 +187,7 @@ main{
     font-size: 4em;
   }
 
-  .home-background{
+  .home-background, .home-background-lowres, .home-background-loaded{
     height: 70vh;
   }
 

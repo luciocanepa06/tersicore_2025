@@ -99,3 +99,20 @@ export async function getNextEvents(year: string, next: boolean){
 
         return events
   }
+
+export function formatDate(date: string){
+    const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"]
+
+    const [year, month, day] = date.split('-')
+    return `${day} ${months[Number(month)-1]} ${year}`
+}
+
+export async function getImages(){
+    const {objects: slugs} = await cosmic.objects.find({"type": "gallerias"})
+    .limit(10)
+    .props("slug,title,metadata,type")
+    .depth(1)
+    .sort("metadata.title")
+
+    return slugs
+}

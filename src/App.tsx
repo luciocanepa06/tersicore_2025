@@ -5,8 +5,10 @@ import './App.css';
 
 import Navbar from './utils/Navbar.tsx';
 import Footer from './utils/Footer.tsx';
+import BackgroundImage from './utils/BackgroundImage.tsx';
 
-import { getNextEvents } from './utils/tooling.tsx'
+import { getNextEvents, formatDate } from './utils/tooling.tsx'
+import { ImagePropsType } from './utils/BackgroundImage.tsx';
 
 type Event = {
   titolo: String,
@@ -16,18 +18,13 @@ type Event = {
 }
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const imageUrl = "https://imgix.cosmicjs.com/93847ec0-e537-11ee-a01e-c56f185aea7b-bg-photo.jpg"
+  const BgImageProps: ImagePropsType = {
+    alt: "home page background",
+    src: "https://imgix.cosmicjs.com/93847ec0-e537-11ee-a01e-c56f185aea7b-bg-photo.jpg",
+    lowres: "https://imgix.cosmicjs.com/20e80aa0-e30e-11ef-8a63-eb57d6c77a36-93847ec0-e537-11ee-a01e-c56f185aea7b-bg-photo.jpg"
+  }
 
   const [event, setEvent] = useState<Event>({titolo: '', data: '', ora: '', luogo: ''});
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = imageUrl;
-    img.onload = () => {
-      setIsLoaded(true);
-    };
-  }, [imageUrl]);
 
   useEffect(() => {
     getNextEvents('', true).then((data) => {
@@ -41,19 +38,19 @@ function App() {
     <main>
 
       <Navbar />
-      <div 
-          className={`home-background${isLoaded ? '-loaded' : ''}`}
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        >
-        <h1 className="title">Tersicore</h1>
+
+      <div className='home-background'>
+        <BackgroundImage props={BgImageProps} />
       </div>
+
       <div className="next-event-container">
         <div className="next-event-card">
           <h3>Prossimo evento</h3>
         {event.titolo != '' &&
         <>
           <h1>{event.titolo}</h1>
-          <p>{event.data} - {event.ora}</p>
+          {/* TODO: update date format: 13 aprile 2025 */}
+          <p>{formatDate(event.data)} - {event.ora}</p>
           <p>{event.luogo}</p>
         </>
         }
