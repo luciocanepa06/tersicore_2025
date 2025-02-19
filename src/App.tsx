@@ -14,7 +14,8 @@ type Event = {
   titolo: String,
   data: String,
   ora: String,
-  luogo: String
+  luogo: String,
+  descrizione?: String
 }
 
 function App() {
@@ -34,6 +35,8 @@ function App() {
     });
   }, []);
 
+  console.log(event.descrizione);
+
   return (
     <main>
 
@@ -51,6 +54,9 @@ function App() {
           <h1>{event.titolo}</h1>
           <p>{formatDate(event.data)} - {event.ora}</p>
           <p>{event.luogo}</p>
+          {event.descrizione != null &&
+            <p><i>{event.descrizione}</i></p>
+          }
         </>
         }
         {event.titolo == '' &&

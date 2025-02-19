@@ -15,24 +15,29 @@ function sortSeclors(a: number, b: number) {
 
 function Repertorio() {
   const [records, setRecords] = useState<Map<any, any>>(new Map());
+  const [secolo, setSecolo] = useState<Array<number>>([]);
 
   useEffect(() => {
     getRecords().then((data) => {
-      setRecords(MapFromRecords(data));
+      let rec = MapFromRecords(data)
+      setRecords(rec);
+      let secoli = Array.from(rec.keys()).sort(sortSeclors).filter((key) => key != 0)
+      secoli.push(0)
+      setSecolo(secoli);
     });
   }, []);
-
+  
   return (
     <>
         <Navbar />
         
         <div className="repertorio-container">
-          {Array.from(records.keys()).sort(sortSeclors).map((key) => {
+          {secolo.map((key: number) => {
             return (
               <div key={`secolo-${key}`} className="secolo">
                 <h1>
-                  {key != 0 && `Secolo ${key}`}
-                  {key == 0 && "Altri brani del repertorio"}
+                  {key != 0 && `${key}`}
+                  {key == 0 && "Brani di Natale"}
                 </h1>
                 <div className='artists'>
                 {records.get(key).map((item: any) => (
