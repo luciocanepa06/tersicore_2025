@@ -1,7 +1,7 @@
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, StrictMode } from 'react';
 import { NavLink } from "react-router";
 
 import './App.css';
@@ -41,9 +41,11 @@ function App() {
   console.log(event.descrizione);
 
   return (
+    <StrictMode>
+
+    <Analytics />
+    <SpeedInsights />
     <main>
-      <Analytics />
-      <SpeedInsights />
       <Navbar />
 
       <div className='home-background'>
@@ -84,6 +86,8 @@ function App() {
       <Footer />
 
     </main>
+  </StrictMode>
+
   );
 }
 

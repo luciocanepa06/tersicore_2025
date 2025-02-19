@@ -19,4 +19,4 @@ createRoot(document.getElementById('root')!).render(
         <Route path="galleria" element={<Gallery />} />
     </Routes>
   </BrowserRouter>
-)
+  )
