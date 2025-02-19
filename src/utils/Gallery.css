@@ -72,22 +72,22 @@
 @media (max-width: 640px) {
     .gallery-controls{
         width: 90vw;
-        margin: 6em auto 1em auto;
+        height: fit-content;
+        margin: 4em auto 1em auto;
     }
     .gallery-dropdown-container{
         width: 90vw;
-        margin: 0 auto;
+        margin: 1em auto;
     }
     .gallery-dropdown-container label{
         display: none;
     }
     #gallery-dropdown{
-        width: 80vw;
+        width: 90vw;
         margin: 0 auto;
     }
     .gallery-controls h1{
         width: 80vw;
-        margin: 0 auto;
     }
     .image-gallery{
         min-width: 100vw !important;
