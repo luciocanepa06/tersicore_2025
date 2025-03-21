@@ -14,11 +14,11 @@ import BackgroundImage from './utils/BackgroundImage.tsx';
 import { getNextEvents, formatDate } from './utils/tooling.tsx'
 
 type Event = {
-  titolo: String,
-  data: String,
-  ora: String,
-  luogo: String,
-  descrizione?: String
+  titolo: string,
+  data: string,
+  ora: string,
+  luogo: string,
+  descrizione?: string
 }
 
 function App() {
@@ -47,7 +47,6 @@ function App() {
     <SpeedInsights />
     <main>
       <Navbar />
-
       <div className='home-background'>
         <BackgroundImage props={BgImageProps} />
       </div>

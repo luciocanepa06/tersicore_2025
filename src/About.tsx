@@ -22,19 +22,21 @@ function About() {
           <h1>Chi siamo</h1>
           <div className='about-text'>
             <p>
-              L'Associazione Coro Tersicore nasce a Lugano nel mese di novembre del 2002 per volontà di un gruppo di giovani (di età compresa fra i 20 e i 30 anni) accomunati dalla passione per la musica.
-              Gli attuali membri, che vantano un'esperienza pluriennale in ambito corale, si ritrovano settimanalmente per provare insieme. I coristi curano la propria preparazione sia attraverso gli incontri settimanali che attraverso uno studio personale.
-              Al Maestro Guido Mollica è affidata la direzione del coro, l'accompagnamento musicale e l'organizzazione di giornate di studio in cui, lavorando sulle capacità individuali di ognuno, si affina il suono d'insieme.
+            Nel novembre del 2002 cinque amici poco più che ventenni, che avevano già cantato insieme per una decina d’anni nel medesimo coro, hanno deciso di riunirsi nuovamente e di fondare l’Associazione Coro Tersicore. A muoverli non era solo l’intenzione di condividere un’attività artistica, ma soprattutto il desiderio di condividere la gioia del canto corale inteso come esperienza comune di vita e di crescita. Tra le muse tradizionalmente associate al canto si è dunque preferita la Tersicore per la sua immagine di ispiratrice e protettrice del canto corale e della danza collettiva. 
+            
+            Mentre il Coro Tersicore cominciava ad esibirsi nei primi concerti a partire da un repertorio polifonico di musica classica prevalentemente cinque-seicentesca, il numero di coristi aumentava di pari passo con gli impegni, contando sull’apporto decisivo di persone motivate e coinvolte. Sin dalle origini i coristi hanno dato la propria disponibilità ad animare anche le funzioni religiose, cogliendo nella bellezza del canto l’elemento unificante tra musica sacra e musica profana. 
+
             </p>
 
             <p>
-              Il gruppo vocale si è esibito sia in Svizzera che in Italia, riscontrando apprezzamento da parte del pubblico. Nel 2007 ha eseguito presso gli studi della RSI la prima di La Nebbia di Cristian Gentilini, premiato al Concorso internazionale di composizione corale. Nel 2010 il Coro Tersicore è stato chiamato dalla RSI ad esibirsi in occasione della messa per l'Ascensione trasmessa in Eurovisione. Nel 2011 ha partecipato, insieme ad altri cori ticinesi, alle celebrazioni del quarantesimo anniversario della morte del compositore Luigi Picchi con il concerto del quale è seguita la pubblicazione di un CD.
-              Nel 2013, a distanza di 10 anni dalla sua fondazione, il Coro Tersicore ha ritenuto fosse giunto il momento di pubblicare un CD, per presentare all'ascoltatore la propria identià musicale esprimendola attraverso la scelta delle opere, degli strumenti e dello stile interpretativo. Il CD, registrato nel 2012, ha per tema le musiche di Felix Mendelssohn Bartholdy. Ulteriori informazioni e le anteprime di alcuni brani si trovano nella sezione "novità".
+            Nel tempo il coro ha ampliato il proprio repertorio, includendovi brani che spaziano dalla musica rinascimentale a quella contemporanea e organizzando delle giornate di studio per affinare ulteriormente la qualità del suono. Ciò ha consentito, fra l’altro, di eseguire presso gli studi RSI la prima di La Nebbia di Cristian Gentilini nell’ambito del Concorso internazionale di composizione corale 2007. 
             </p>
 
             <p>
-              Nel 2014 il gruppo vocale ha partecipato alla XXI edizione del Festival internazionale di musica corale "D.G. KIRIAC", svoltosi nella regione della Muntenia (Romania), esibendosi nelle sezioni "musica corale romena ed internazionale" e "musica sacra".
-              Oltre alle consuete esecuzioni con opere di epoche e compositori vari, il coro anima varie funzioni religiose come messe, feste patronali e matrimoni, proponendo un repertorio che attualmente comprende brani che spaziano dalla musica rinascimentale a quella contemporanea.
+            La versatilità riconosciuta al gruppo gli ha permesso di animare varie messe in occasione di matrimoni e di feste patronali, a cui va aggiunta la messa per l’Ascensione trasmessa in Eurovisione dalla RSI nel 2010, anno nel quale ha anche collaborato alla pubblicazione di un CD in memoria di Luigi Picchi. Nel 2013, a distanza di dieci anni dalla sua fondazione, il Coro Tersicore ha pubblicato il CD Dieci, con opere di Felix Mendelssohn Bartholdy. Nel 2014 ha partecipato alla XXI edizione del Festival internazionale di musica corale “D.G. KIRIAC”, svoltosi nella regione della Muntenia (Romania), esibendosi nelle sezioni “musica corale romena ed internazionale” e “musica sacra”. Nel 2019 il Coro è stato invitato a partecipare alla Rassegna Corale Europea dei Popoli in Friuli. 
+            
+            Il Coro Tersicore si è esibito in collaborazione con diversi cori e orchestre, tra cui la Scuola Corale Scarlatti di Bollate (MI), La Scuola Corale della Cattedrale, il Coro Alpe Adria di Treppo Grande (UD), il Coro Les Courants d’Airs (Parigi), il Gruppo Canzoni e Costumi Ticinesi di Bellinzona, i Cantori di Pregassona, la Filarmonica Mosaico di Monte Carasso, l’Orchestra da Camera di Lugano e l’ensemble Hnoss di Milano.
+
             </p>
           </div>
         </div>
