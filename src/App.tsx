@@ -73,6 +73,11 @@ function App() {
         </div>
       </div>
 
+        <div className="new-singers-container">
+          <h3>Ti piace cantare? Siamo alla ricerca di nuove voci!</h3>
+          <p>Contattaci: <a href="mailto:info@tersicore.ch" type="email">info@tersicore.ch</a></p>
+        </div>
+
       <div className="cd-container">
             <img src="https://imgix.cosmicjs.com/db01c9b0-e53c-11ee-a01e-c56f185aea7b-CD-cover.jpg" />
             <div>

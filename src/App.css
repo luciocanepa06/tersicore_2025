@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   width: 100%;
   overflow-x: hidden;
   min-height: -webkit-fill-available;
@@ -24,12 +24,14 @@ body {
   color: #333;
 }
 
-main{
+main {
   min-width: 100vw;
 }
 
 
-.home-background, .home-background-lowres, .home-background-loaded{
+.home-background,
+.home-background-lowres,
+.home-background-loaded {
   width: 100vw;
   height: 90dvh;
 
@@ -43,7 +45,7 @@ main{
   background-size: cover;
 }
 
-.home-background h1{
+.home-background h1 {
   display: none;
   transform: translate(0, -2em);
   filter: blur(5px);
@@ -57,20 +59,20 @@ main{
   color: white;
 }
 
-.home-background-lowres h1{
+.home-background-lowres h1 {
   display: none;
   transform: translate(0, -2em);
   filter: blur(5px);
   transition: transform 0.5s ease-in, filter 0.5s ease-in;
 }
 
-.home-background-loaded h1{
+.home-background-loaded h1 {
   display: block;
   transform: translate(0, -1em);
   filter: blur(0px);
 }
 
-.next-event-container{
+.next-event-container {
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -80,7 +82,7 @@ main{
   z-index: 3;
 }
 
-.next-event-card{
+.next-event-card {
   width: 60vw;
 
   display: flex;
@@ -95,7 +97,8 @@ main{
   border-radius: 2em;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
-.next-event-card h3{
+
+.next-event-card h3 {
   width: calc(60vw - 4em);
   height: 1em;
   margin: -0.5em auto 1.5em auto;
@@ -104,16 +107,16 @@ main{
   font-weight: 400;
 }
 
-.next-event-card h1{
+.next-event-card h1 {
   width: calc(60vw - 2em);
-  
+
   padding-top: 1em;
   border-top: 1px solid rgb(215, 215, 215);
 
   margin-bottom: 0.5em;
 }
 
-.next-event-card p{
+.next-event-card p {
   margin-bottom: 1.5em;
 }
 
@@ -125,7 +128,7 @@ main{
   padding-top: 1em;
   border-top: 1px solid rgb(215, 215, 215);
 
-  color:#333;
+  color: #333;
   font-weight: 700;
 }
 
@@ -135,11 +138,34 @@ main{
 }
 
 #discover {
-  color:#333;
+  color: #333;
   font-weight: 500;
 }
 
-.cd-container{
+.new-singers-container {
+  width: 60vw;
+  margin: 2em auto 2em auto;
+  padding: 2em;
+  background-color: white;
+  border-radius: 2em;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.new-singers-container h3 {
+  margin-bottom: 0.5em;
+}
+
+.new-singers-container a {
+  color: #911100;
+  font-weight: 700;
+}
+
+.new-singers-container a:hover {
+  cursor: pointer;
+  color: #b71b07
+}
+
+.cd-container {
   width: 60vw;
   height: 15em;
   margin: 2em auto 4em auto;
@@ -153,14 +179,14 @@ main{
   align-items: flex-start;
 }
 
-.cd-container img{
+.cd-container img {
   width: 15em;
   height: 15em;
 
   border-radius: 2em 0 0 2em;
 }
 
-.cd-container div{
+.cd-container div {
   width: calc(60vw - 15em);
   height: 15em;
   padding: 2em;
@@ -170,49 +196,52 @@ main{
   justify-content: space-between;
 }
 
-.cd-container p{
+.cd-container p {
   transform: translate(0, -2em);
 }
 
-.cd-container a{
+.cd-container a {
   text-decoration: none;
-  color:#333;
+  color: #333;
   font-weight: 700;
 }
 
-.cd-container a:hover{
+.cd-container a:hover {
   cursor: pointer;
   color: #911100;
   text-decoration: underline;
 }
 
 @media (max-width: 640px) {
-  .home-background h1{
+  .home-background h1 {
     font-size: 4em;
   }
 
-  .home-background, .home-background-lowres, .home-background-loaded{
+  .home-background,
+  .home-background-lowres,
+  .home-background-loaded {
     height: 70dvh;
   }
 
-  .next-event-card{
+  .next-event-card {
     width: 80vw;
   }
 
-  .next-event-card h3{
+  .next-event-card h3 {
     width: calc(80vw - 4em);
   }
-  .next-event-card h1{
+
+  .next-event-card h1 {
     width: calc(80vw - 2em);
   }
 
-  .cd-container{
+  .cd-container {
     width: 80vw;
     height: 30em;
     flex-direction: column;
   }
 
-  .cd-container img{
+  .cd-container img {
     width: 80vw;
     height: 15em;
     object-fit: cover;
@@ -220,8 +249,13 @@ main{
     border-radius: 2em 2em 0 0;
   }
 
-  .cd-container div{
+  .cd-container div {
     width: 80vw;
     min-height: 15em;
   }
+
+  .new-singers-container {
+    width: 80vw;
+  }
+
 }
